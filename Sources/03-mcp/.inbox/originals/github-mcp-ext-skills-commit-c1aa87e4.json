@@ -1,0 +1,101 @@
+{
+  "sha": "c1aa87e4c381c82b99aa37471d0eae4ab50f9985",
+  "node_id": "C_kwDORGPnptoAKGMxYWE4N2U0YzM4MWM4MmI5OWFhMzc0NzFkMGVhZTRhYjUwZjk5ODU",
+  "commit": {
+    "author": {
+      "name": "EmilAnkerstjerne",
+      "email": "70580136+EmilAnkerstjerne@users.noreply.github.com",
+      "date": "2026-10-16T12:09:49Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-10-16T12:09:49Z"
+    },
+    "message": "Add Brewale to server implementations (#154)\n\nAdds [Brewale](https://brewale.dev), a hosted MCP server for team skills\nand conventions, to the Servers table in `docs/implementations.md`.\n\n## Motivation and Context\nBrewale implements the Skills extension\n(`io.modelcontextprotocol/skills`) on its hosted MCP server. Listing it\ngives host and SDK implementers another `v1` server to test against.\n\n- Serves org, project and personal skills via `skills/list`,\n`skills/get` and `resources/read`, with complete sha256 manifests\n(binary files included) and `resources/directory/read`.\n- Access is resolved per user: personal skills reach only their owner,\nproject skills follow the connection's project scope.\n\n## How Has This Been Tested?\n- Conformance suite (`@modelcontextprotocol/conformance@alpha`,\n`--spec-version 2025-11-25`): `sep-2640-skills-enumeration` 30/30,\n`sep-2640-skills-manifest` 6/6, `sep-2640-skills-directory` 7/7. The 2\nskipped checks apply to 2026-07-28 only.\n- MCP Inspector CLI: `--method skills/list --verify --require-digests`\nreports no conformance errors, including a binary file's digest.\n\nHappy to provide a test org and token so maintainers can run the\nconformance suite against the hosted server.\n\n## Breaking Changes\nNone. Documentation only.\n\n## Types of changes\n- [ ] Bug fix (non-breaking change which fixes an issue)\n- [ ] New feature (non-breaking change which adds functionality)\n- [ ] Breaking change (fix or feature that would cause existing\nfunctionality to change)\n- [x] Documentation update\n\n## Checklist\n- [x] I have read the [MCP\nDocumentation](https://modelcontextprotocol.io)\n- [x] My code follows the repository's style guidelines\n- [ ] New and existing tests pass locally\n- [ ] I have added appropriate error handling\n- [x] I have added or updated documentation as needed\n\n## Additional context\nOne-line row following the list's format: unmarked category (maintained\nby the organization behind the product), note kept to one line.",
+    "tree": {
+      "sha": "cd05ebf01b7ce8676b82068e103f33e25c9aed68",
+      "url": "https://api.github.com/repos/modelcontextprotocol/ext-skills/git/trees/cd05ebf01b7ce8676b82068e103f33e25c9aed68"
+    },
+    "url": "https://api.github.com/repos/modelcontextprotocol/ext-skills/git/commits/c1aa87e4c381c82b99aa37471d0eae4ab50f9985",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq0hQNCRC1aQ7uu5UhlAAACqwQAAt+Qnkxlrn2RJsJp/6fKeEp\nEGKTLaREfNBDYLCq+gfTEDuNB7XKQ0wcw/WaYc2P4v+VFQ9mZOzRSFVHJJcHGMAI\nHyXgPmfn6B58O5FMx2BB0pg1iWUuKucQ4XaKWEBSnlc2SUHD6fYMy+tWozMmEndP\ny9VEjbBHtnCo5RDqUSq4k+kZzFuZZace4l1xA2FnJJU6RewWLivVPz4m1fFkMP5X\nJoRo78Rm7VJJ7xoDR8IdPYKDvBvevHU9J/BsbI4Ywy8aBUMKlaQl5IicNwrx4L16\nQWAI2X3d8Hlc1mi4rJtgKCHMKizB/0Rsv29tfrdpJ17eB+AdAqMw8C2eP0Xb9pq4\n8gJQN8noF8I+ALgdFQIeRMvUhcGTWvphOfn2wBBZu18xXrW2vu8g5yTc0kRYU560\n7GHpSnsjjHendhAfGCeRWDIuADr2QdFuo9AvLP5YHxqSjK7OBokUmaKKmisWBcER\nGV9NarDNaFGi1hu+x8b7Hb8HuaOmUQcafYfnvfolcCN3FIffeYzsqJ7iAW9yWlHG\nR7RIVVL7TNbKwYffyJlriIGf2tWnm0qG3fQeP4G4DEJ+1ZX6AM8gJdhGUYTS1+jz\n3nDQAU2RLNywBNRMsKRU1nNKwAx85lT/zmMusaxlc3VUtEXKrMex9pocCnO+X5ma\nu/yoz6OKwLTb/RINuvoZ\n=uBhl\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree cd05ebf01b7ce8676b82068e103f33e25c9aed68\nparent e083f6da6529bfa0c5e2d6d783d44afdc907410f\nauthor EmilAnkerstjerne <70580136+EmilAnkerstjerne@users.noreply.github.com> 1792152589 +0200\ncommitter GitHub <noreply@github.com> 1792152589 -0700\n\nAdd Brewale to server implementations (#154)\n\nAdds [Brewale](https://brewale.dev), a hosted MCP server for team skills\nand conventions, to the Servers table in `docs/implementations.md`.\n\n## Motivation and Context\nBrewale implements the Skills extension\n(`io.modelcontextprotocol/skills`) on its hosted MCP server. Listing it\ngives host and SDK implementers another `v1` server to test against.\n\n- Serves org, project and personal skills via `skills/list`,\n`skills/get` and `resources/read`, with complete sha256 manifests\n(binary files included) and `resources/directory/read`.\n- Access is resolved per user: personal skills reach only their owner,\nproject skills follow the connection's project scope.\n\n## How Has This Been Tested?\n- Conformance suite (`@modelcontextprotocol/conformance@alpha`,\n`--spec-version 2025-11-25`): `sep-2640-skills-enumeration` 30/30,\n`sep-2640-skills-manifest` 6/6, `sep-2640-skills-directory` 7/7. The 2\nskipped checks apply to 2026-07-28 only.\n- MCP Inspector CLI: `--method skills/list --verify --require-digests`\nreports no conformance errors, including a binary file's digest.\n\nHappy to provide a test org and token so maintainers can run the\nconformance suite against the hosted server.\n\n## Breaking Changes\nNone. Documentation only.\n\n## Types of changes\n- [ ] Bug fix (non-breaking change which fixes an issue)\n- [ ] New feature (non-breaking change which adds functionality)\n- [ ] Breaking change (fix or feature that would cause existing\nfunctionality to change)\n- [x] Documentation update\n\n## Checklist\n- [x] I have read the [MCP\nDocumentation](https://modelcontextprotocol.io)\n- [x] My code follows the repository's style guidelines\n- [ ] New and existing tests pass locally\n- [ ] I have added appropriate error handling\n- [x] I have added or updated documentation as needed\n\n## Additional context\nOne-line row following the list's format: unmarked category (maintained\nby the organization behind the product), note kept to one line.",
+      "verified_at": "2026-10-16T12:09:50Z"
+    }
+  },
+  "url": "https://api.github.com/repos/modelcontextprotocol/ext-skills/commits/c1aa87e4c381c82b99aa37471d0eae4ab50f9985",
+  "html_url": "https://github.com/modelcontextprotocol/ext-skills/commit/c1aa87e4c381c82b99aa37471d0eae4ab50f9985",
+  "comments_url": "https://api.github.com/repos/modelcontextprotocol/ext-skills/commits/c1aa87e4c381c82b99aa37471d0eae4ab50f9985/comments",
+  "author": {
+    "login": "EmilAnkerstjerne",
+    "id": 70580136,
+    "node_id": "MDQ6VXNlcjcwNTgwMTM2",
+    "avatar_url": "https://avatars.githubusercontent.com/u/70580136?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/EmilAnkerstjerne",
+    "html_url": "https://github.com/EmilAnkerstjerne",
+    "followers_url": "https://api.github.com/users/EmilAnkerstjerne/followers",
+    "following_url": "https://api.github.com/users/EmilAnkerstjerne/following{/other_user}",
+    "gists_url": "https://api.github.com/users/EmilAnkerstjerne/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/EmilAnkerstjerne/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/EmilAnkerstjerne/subscriptions",
+    "organizations_url": "https://api.github.com/users/EmilAnkerstjerne/orgs",
+    "repos_url": "https://api.github.com/users/EmilAnkerstjerne/repos",
+    "events_url": "https://api.github.com/users/EmilAnkerstjerne/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/EmilAnkerstjerne/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "e083f6da6529bfa0c5e2d6d783d44afdc907410f",
+      "url": "https://api.github.com/repos/modelcontextprotocol/ext-skills/commits/e083f6da6529bfa0c5e2d6d783d44afdc907410f",
+      "html_url": "https://github.com/modelcontextprotocol/ext-skills/commit/e083f6da6529bfa0c5e2d6d783d44afdc907410f"
+    }
+  ],
+  "stats": {
+    "total": 1,
+    "additions": 1,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "f801c6089cf2efcb0bbe2c885a873a96d273bbfa",
+      "filename": "docs/implementations.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "blob_url": "https://github.com/modelcontextprotocol/ext-skills/blob/c1aa87e4c381c82b99aa37471d0eae4ab50f9985/docs%2Fimplementations.md",
+      "raw_url": "https://github.com/modelcontextprotocol/ext-skills/raw/c1aa87e4c381c82b99aa37471d0eae4ab50f9985/docs%2Fimplementations.md",
+      "contents_url": "https://api.github.com/repos/modelcontextprotocol/ext-skills/contents/docs%2Fimplementations.md?ref=c1aa87e4c381c82b99aa37471d0eae4ab50f9985",
+      "patch": "@@ -29,6 +29,7 @@ To add or update a row, open a PR. Keep notes to one line.\n | [hf-mcp-server](https://github.com/huggingface/hf-mcp-server) | | TypeScript | `v1` | Hugging Face. `skills/list`, `skills/get`, `directoryRead`. HTTP transports only |\n | [github-stars-contrib-mcp-server](https://github.com/svg153/github-stars-contrib-mcp-server) | `community` | Python | `v1` ([#144](https://github.com/modelcontextprotocol/ext-skills/issues/144)) | Passes the [conformance suite](https://github.com/modelcontextprotocol/conformance) server scenarios |\n | [github-mcp-server](https://github.com/github/github-mcp-server/pull/2428) | | Go | `prototype` | Demo branch, not for merge |\n+| [Brewale](https://brewale.dev/docs#skills-over-mcp) | | TypeScript | `v1` | Hosted. Org, project and personal skills with per-user access; `directoryRead`; passes the conformance server scenarios |\n \n ## Hosts (including agent harnesses, IDEs, and web applications)\n "
+    }
+  ]
+}
