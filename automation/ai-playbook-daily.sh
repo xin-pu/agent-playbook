@@ -131,7 +131,7 @@ fi
 if [ -n "$REPORT_TO" ]; then
   opencode run --standalone --auto \
     "读取 $HEALTH 的内容，用 ms365 给 $REPORT_TO 发一封告警邮件：主题「【AI研究知识库采集】$(date +%F) $MODE 运行异常」，正文用简洁的正式书面语，把 health 文件里的 FAIL 与 INFO 逐条列出，并说明本轮日志为 $LOG。不要执行其他步骤，发完即止。" \
-    2>&1 | tee -a "$LOG"
+    < /dev/null 2>    2>&11 | tee -a "$LOG"
 else
   echo "reportTo 为空，跳过告警邮件（见 automation/config.json）" | tee -a "$LOG"
 fi
