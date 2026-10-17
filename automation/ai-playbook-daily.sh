@@ -57,7 +57,7 @@ else
 fi
 
 START=$(date +%s)
-opencode run --standalone --auto "$PROMPT" 2>&1 | tee -a "$LOG"
+opencode run --standalone --auto "$PROMPT" < /dev/null 2>&1 | tee -a "$LOG"
 AGENT_RC=${PIPESTATUS[0]}
 echo "opencode rc: $AGENT_RC (工具报错即非零，不作为本轮判据)" | tee -a "$LOG"
 
